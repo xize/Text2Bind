@@ -16,6 +16,7 @@ import javax.swing.JTextArea;
 
 import me.xize.text2bind.events.ConvertEvent;
 import me.xize.text2bind.events.CopyEvent;
+import me.xize.text2bind.events.ResetEvent;
 
 public class Gui extends JFrame implements GuiApi {
 
@@ -98,6 +99,7 @@ public class Gui extends JFrame implements GuiApi {
 	public void startListeners() {
 		button.addActionListener(new ConvertEvent(this));
 		copy.addActionListener(new CopyEvent(this));
+		clear.addActionListener(new ResetEvent(this));
 	}
 
 	public JButton getButton() {
